@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Bloc Clean Arch Demo',
       home: const LoginScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

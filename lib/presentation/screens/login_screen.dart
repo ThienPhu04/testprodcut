@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
             BlocConsumer<LoginBloc, LoginState>(
               listener: (context, state) {
                 if (state is LoginSuccess) {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ContactScreen()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const ContactScreen()));
                 } else if (state is LoginFailure) {
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Login failed")));
                 }
